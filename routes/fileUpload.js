@@ -1,5 +1,5 @@
 const express = require("express");
-const { uploadFiles, getFiles } = require("../controllers/fileUpload");
+const { uploadFiles, getFiles , apiRunning } = require("../controllers/fileUpload");
 const advanceResults = require("../middleware/advanceResults");
 const File = require("../model/fileModel");
 
