@@ -3,8 +3,11 @@ const path = require("path");
 const fileUpload = require("./routes/fileUpload");
 const connectDB = require(`./config/db`);
 const errorHandler = require("./middleware/error");
+
 connectDB();
 const app = express();
+
+app.use(express.json());
 
 const port = process.env.PORT || 3000;
 
