@@ -1,10 +1,18 @@
 const express = require("express");
-const { uploadFiles, getFiles , apiRunning } = require("../controllers/fileUpload");
+const {
+  uploadFiles,
+  getFiles,
+  updateFiles,
+} = require("../controllers/fileUpload");
 const advanceResults = require("../middleware/advanceResults");
 const File = require("../model/fileModel");
 
 const router = express.Router();
 
-router.route("/").post(uploadFiles).get(advanceResults(File), getFiles);
+router
+  .route("/")
+  .post(uploadFiles)
+  .get(advanceResults(File), getFiles)
+  .put(updateFiles);
 
 module.exports = router;
