@@ -1,62 +1,43 @@
-1/23/2022 5:44:03 PM: 1/23/2022 5:44:03 PM: Service Execution starts
-1/23/2022 5:44:03 PM: Could not find file 'C:\Users\3m\Desktop\mail.txt'.
-1/23/2022 5:44:03 PM: 1/23/2022 5:44:03 PM: Service Execution stops
-1/23/2022 5:44:35 PM: 1/23/2022 5:44:35 PM: Service Execution starts
-1/23/2022 5:44:35 PM: 1/23/2022 5:44:35 PM: Service Execution stops
-1/23/2022 5:45:24 PM: 1/23/2022 5:45:24 PM: Service Execution starts
-1/23/2022 5:45:24 PM: 1/23/2022 5:45:24 PM: Service Execution stops
-1/23/2022 5:46:14 PM: 1/23/2022 5:46:14 PM: Service Execution starts
-1/23/2022 5:46:14 PM: 1/23/2022 5:46:14 PM: Service Execution stops
-1/23/2022 5:47:21 PM: 1/23/2022 5:47:21 PM: Service Execution starts
-1/23/2022 5:47:25 PM: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
-1/23/2022 5:47:25 PM: 1/23/2022 5:47:25 PM: Service Execution stops
-1/23/2022 5:48:23 PM: 1/23/2022 5:48:23 PM: Service Execution starts
-1/23/2022 5:48:26 PM: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
-1/23/2022 5:48:26 PM: 1/23/2022 5:48:26 PM: Service Execution stops
-1/23/2022 5:49:07 PM: 1/23/2022 5:49:07 PM: Service Execution starts
-1/23/2022 5:49:10 PM: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
-1/23/2022 5:49:10 PM: 1/23/2022 5:49:10 PM: Service Execution stops
-1/23/2022 5:52:58 PM: 1/23/2022 5:52:58 PM: Service Execution starts
-1/23/2022 5:53:02 PM: 1/23/2022 5:53:02 PM: Mail sent successfully to alimuhammadmuradali@gmail.com
-1/23/2022 5:53:02 PM: 1/23/2022 5:53:02 PM: Service Execution stops
-1/24/2022 12:52:17 AM: 1/24/2022 12:52:17 AM: Service Execution starts
-1/24/2022 12:52:23 AM: 1/24/2022 12:52:23 AM: Mail sent successfully to alimuhammadmuradali@gmail.com
-1/24/2022 12:52:23 AM: 1/24/2022 12:52:23 AM: Service Execution stops
-1/25/2022 3:06:25 PM: 1/25/2022 3:06:24 PM: Service Execution starts
-1/25/2022 3:06:32 PM: 1/25/2022 3:06:32 PM: Mail sent successfully to alimuhammadmuradali@gmail.com
-1/25/2022 3:06:32 PM: 1/25/2022 3:06:32 PM: Service Execution stops
-1/25/2022 3:11:16 PM: 1/25/2022 3:11:16 PM: Service Execution starts
-1/25/2022 3:11:21 PM: 1/25/2022 3:11:21 PM: Mail sent successfully to alimuhammadmuradali@gmail.com
-1/25/2022 3:11:21 PM: 1/25/2022 3:11:21 PM: Service Execution stops
-1/25/2022 3:13:55 PM: 1/25/2022 3:13:55 PM: Service Execution starts
-1/25/2022 3:13:59 PM: 1/25/2022 3:13:59 PM: Mail sent successfully to alimuhammadmuradali@gmail.com
-1/25/2022 3:13:59 PM: 1/25/2022 3:13:59 PM: Service Execution stops
-1/25/2022 3:15:42 PM: 1/25/2022 3:15:42 PM: Service Execution starts
-1/25/2022 3:15:45 PM: 1/25/2022 3:15:45 PM: Mail sent successfully to alimuhammadmuradali@gmail.com
-1/25/2022 3:15:45 PM: 1/25/2022 3:15:45 PM: Service Execution stops
-1/25/2022 5:22:53 PM: 1/25/2022 5:22:53 PM: Service Execution starts
-1/25/2022 5:23:26 PM: 1/25/2022 5:23:26 PM: Service Execution starts
-1/25/2022 5:23:30 PM: 1/25/2022 5:23:30 PM: Mail sent successfully to hr.karachi@usmobile.com
-1/25/2022 5:23:33 PM: 1/25/2022 5:23:33 PM: Mail sent successfully to cso.khi@nu.edu.pk
-1/25/2022 5:23:37 PM: 1/25/2022 5:23:37 PM: Mail sent successfully to ghaniyya.shahid@bankalfalah.com
-1/25/2022 5:23:40 PM: 1/25/2022 5:23:40 PM: Mail sent successfully to hr@nccpl.com.pk
-1/25/2022 5:23:43 PM: 1/25/2022 5:23:43 PM: Mail sent successfully to hamza@mrgc.com.pk
-1/25/2022 5:23:47 PM: 1/25/2022 5:23:47 PM: Mail sent successfully to abdullah.akhtar@retailo.co
-1/25/2022 5:23:50 PM: 1/25/2022 5:23:50 PM: Mail sent successfully to anjana.dheeraj@wavetec.com
-1/25/2022 5:23:54 PM: 1/25/2022 5:23:54 PM: Mail sent successfully to jobs@jintech.com
-1/25/2022 5:23:57 PM: 1/25/2022 5:23:57 PM: Mail sent successfully to careers@hblasset.com
-1/25/2022 5:24:00 PM: 1/25/2022 5:24:00 PM: Mail sent successfully to pooja.kumari@mparsec.com
-1/25/2022 5:24:03 PM: 1/25/2022 5:24:03 PM: Mail sent successfully to jobs@mcbah.com
-1/25/2022 5:24:07 PM: 1/25/2022 5:24:07 PM: Mail sent successfully to HR@aciano.net
-1/25/2022 5:24:10 PM: 1/25/2022 5:24:10 PM: Mail sent successfully to salman.siddiqui@aciano.net
-1/25/2022 5:24:13 PM: 1/25/2022 5:24:13 PM: Mail sent successfully to javeria.sadia@ext.careem.com
-1/25/2022 5:24:17 PM: 1/25/2022 5:24:17 PM: Mail sent successfully to hr@ignitelabs.co
-1/25/2022 5:24:20 PM: 1/25/2022 5:24:20 PM: Mail sent successfully to kdheeraj@spursol.com
-1/25/2022 5:24:23 PM: 1/25/2022 5:24:23 PM: Mail sent successfully to careers@jbs.live
-1/25/2022 5:24:27 PM: 1/25/2022 5:24:27 PM: Mail sent successfully to asif@jellyfish.pk
-1/25/2022 5:24:30 PM: 1/25/2022 5:24:30 PM: Mail sent successfully to ayesha.brohi@nytrotech.com
-1/25/2022 5:24:33 PM: 1/25/2022 5:24:33 PM: Mail sent successfully to careers@fourgensys.com
-1/25/2022 5:24:36 PM: 1/25/2022 5:24:36 PM: Mail sent successfully to swera.saleem@jubileelife.com
-1/25/2022 5:24:40 PM: 1/25/2022 5:24:40 PM: Mail sent successfully to careers@ovalnft.com
-1/25/2022 5:24:43 PM: 1/25/2022 5:24:43 PM: Mail sent successfully to batool@ovalnft.com
-1/25/2022 5:24:43 PM: 1/25/2022 5:24:43 PM: Service Execution stops
+2/24/2022 12:30:11 AM: 2/24/2022 12:30:10 AM: Service Execution starts
+2/24/2022 12:30:19 AM: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+2/24/2022 12:30:20 AM: The parameter 'addresses' cannot be an empty string. (Parameter 'addresses')
+2/24/2022 12:30:20 AM: An invalid character was found in the mail header: ';'.
+2/24/2022 12:30:20 AM: 2/24/2022 12:30:20 AM: Service Execution stops
+2/24/2022 12:31:38 AM: 2/24/2022 12:31:37 AM: Service Execution starts
+2/24/2022 12:31:40 AM: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at
+2/24/2022 12:31:40 AM: The parameter 'addresses' cannot be an empty string. (Parameter 'addresses')
+2/24/2022 12:31:40 AM: An invalid character was found in the mail header: ';'.
+2/24/2022 12:31:40 AM: 2/24/2022 12:31:40 AM: Service Execution stops
+2/24/2022 12:32:41 AM: 2/24/2022 12:32:41 AM: Service Execution starts
+2/24/2022 12:32:46 AM: 2/24/2022 12:32:46 AM: Mail sent successfully to k180261@nu.edu.pk
+2/24/2022 12:32:47 AM: The parameter 'addresses' cannot be an empty string. (Parameter 'addresses')
+2/24/2022 12:32:47 AM: An invalid character was found in the mail header: ';'.
+2/24/2022 12:32:47 AM: 2/24/2022 12:32:47 AM: Service Execution stops
+2/24/2022 12:36:27 AM: 2/24/2022 12:36:27 AM: Service Execution starts
+2/24/2022 12:36:31 AM: 2/24/2022 12:36:31 AM: Mail sent successfully to k180261@nu.edu.pk
+2/24/2022 12:36:31 AM: The parameter 'addresses' cannot be an empty string. (Parameter 'addresses')
+2/24/2022 12:36:31 AM: An invalid character was found in the mail header: ';'.
+2/24/2022 12:36:31 AM: 2/24/2022 12:36:31 AM: Service Execution stops
+2/24/2022 12:37:48 AM: 2/24/2022 12:37:48 AM: Service Execution starts
+2/24/2022 12:37:53 AM: 2/24/2022 12:37:53 AM: Mail sent successfully to hr@appicoders.com
+2/24/2022 12:37:57 AM: 2/24/2022 12:37:57 AM: Mail sent successfully to bilal@eurustechnologies.com
+2/24/2022 12:37:57 AM: The specified string is not in the form required for an e-mail address.
+2/24/2022 12:38:03 AM: 2/24/2022 12:38:03 AM: Mail sent successfully to hr@vidizmo.com
+2/24/2022 12:38:07 AM: 2/24/2022 12:38:07 AM: Mail sent successfully to hr@conceptrecall.com
+2/24/2022 12:38:11 AM: 2/24/2022 12:38:11 AM: Mail sent successfully to qurantalk9@gmail.com
+2/24/2022 12:38:14 AM: 2/24/2022 12:38:14 AM: Mail sent successfully to ayeshahashmi@vinncorp.com
+2/24/2022 12:38:18 AM: 2/24/2022 12:38:18 AM: Mail sent successfully to taimoor.iqbal@empglabs.com
+2/24/2022 12:38:21 AM: 2/24/2022 12:38:21 AM: Mail sent successfully to careers@traffix.com
+2/24/2022 12:38:25 AM: 2/24/2022 12:38:25 AM: Mail sent successfully to admin@rgssoftwaresolutions.com
+2/24/2022 12:38:28 AM: 2/24/2022 12:38:28 AM: Mail sent successfully to imohammadarsalan@icloud.com
+2/24/2022 12:38:32 AM: 2/24/2022 12:38:32 AM: Mail sent successfully to anaeem@nisum.com
+2/24/2022 12:38:36 AM: 2/24/2022 12:38:36 AM: Mail sent successfully to careers_khi@trafix.com
+2/24/2022 12:38:40 AM: 2/24/2022 12:38:40 AM: Mail sent successfully to farhan.tahreem@netsoltech.com
+2/24/2022 12:38:44 AM: 2/24/2022 12:38:44 AM: Mail sent successfully to hr@tixsee.com
+2/24/2022 12:38:48 AM: 2/24/2022 12:38:48 AM: Mail sent successfully to careers@syscrowd.com
+2/24/2022 12:38:52 AM: 2/24/2022 12:38:52 AM: Mail sent successfully to careers@matz.group
+2/24/2022 12:38:55 AM: 2/24/2022 12:38:55 AM: Mail sent successfully to sana.hanif@edevtech.com
+2/24/2022 12:38:59 AM: 2/24/2022 12:38:59 AM: Mail sent successfully to hammad.javed@invozone.com
+2/24/2022 12:39:03 AM: 2/24/2022 12:39:03 AM: Mail sent successfully to zakir.yousuf@logicielservice.com
+2/24/2022 12:39:07 AM: 2/24/2022 12:39:07 AM: Mail sent successfully to tarabia.mushtaq@mlogica.com
+2/24/2022 12:39:07 AM: 2/24/2022 12:39:07 AM: Service Execution stops

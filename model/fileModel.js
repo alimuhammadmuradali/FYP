@@ -24,6 +24,11 @@ const FileSchema = mongoose.Schema({
     default: "Pending",
     enum: ["Pending", "Approved", "Rejected"],
   },
+
+  createAt: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 module.exports = mongoose.model("File", FileSchema);

@@ -3,7 +3,7 @@ import requests
 import glob
 import os
 
-reqUrl = "http://192.168.0.114:3000/upload"
+reqUrl = "http://fypsmartcomputing.herokuapp.com/upload"
 current_working_dir = r'C:\Users\3m\Desktop\mydir'
 
 headersList = {"Accept": "*/*"}

@@ -35,46 +35,48 @@ const advanceResults = (model, populate) => async (req, res, next) => {
     query = query.sort("-createAt");
   }
 
-  //paginatiion
-  const total = await model.countDocuments();
-  const page = parseInt(req.query.page, 10) || 1; //10 base  // page 1 default
-  const limit = parseInt(req.query.limit, 10) || 20;
-  const startIndex = (page - 1) * limit;
-  const endIndex = page * limit;
-  const totalPages = Math.ceil(total / limit);
-
-  query = query.skip(startIndex).limit(limit);
-
   if (populate) {
     query = query.populate(populate);
   }
+
   var results = await query;
 
-  const pagination = {};
+  // //paginatiion
+  // const total = results.length;
+  // const page = parseInt(req.query.page, 10) || 1; //10 base  // page 1 default
+  // const limit = parseInt(req.query.limit, 10) || 20;
+  // const startIndex = (page - 1) * limit;
+  // const endIndex = page * limit;
+  // const totalPages = Math.ceil(results.length / limit);
 
-  if (endIndex < total) {
-    pagination.next = {
-      page: page + 1,
-      limit,
-    };
-  }
+  // results = results.skip(startIndex).limit(limit);
 
-  if (startIndex > 0) {
-    pagination.prev = {
-      page: page - 1,
-      limit,
-    };
-  }
+  // results = await query;
+
+  // const pagination = {};
+
+  // if (endIndex < total) {
+  //   pagination.next = {
+  //     page: page + 1,
+  //     limit,
+  //   };
+  // }
+
+  // if (startIndex > 0) {
+  //   pagination.prev = {
+  //     page: page - 1,
+  //     limit,
+  //   };
+  // }
 
   res.advanceResults = {
     success: true,
     count: results.length,
-    total,
-    totalPages,
-    pagination,
+    // total,
+    // totalPages,
+    // pagination,
     data: results,
   };
-  console.log("in ad");
   next();
 };
 

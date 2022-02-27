@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
+    console.log("trying to connenct mongodb");
     const conn = await mongoose.connect(
       `mongodb+srv://alimuhammad:honda123@cluster0.1c7oh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
     );
