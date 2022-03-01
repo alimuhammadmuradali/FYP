@@ -32,10 +32,8 @@ exports.uploadFiles = asyncHandler((req, res, next) => {
       return next(new ErrorResponse(err, 400));
       //  return res.status(400).send(err);
     }
-    console.log(req.files.length);
-    console.log(req.files[0].originalname);
 
-    if (req.files.length != 3) {
+    if (req.files && req.files.length != 3) {
       return next(new ErrorResponse("send 2 images and a text file", 400));
     }
     var host = `${req.protocol}://${req.get("host")}/file/`;
