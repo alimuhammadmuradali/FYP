@@ -21,6 +21,7 @@ let upload = multer({
 }).array("files", 3);
 
 exports.uploadFiles = asyncHandler((req, res, next) => {
+  console.log(req.body);
   // console.log("ali");
   // return next(new ErrorResponse(`Your status is Inactive`, 404));
 
