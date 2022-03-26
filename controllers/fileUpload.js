@@ -4,6 +4,9 @@ const FileModel = require("../model/fileModel");
 const ErrorResponse = require("../utils/errorResponse");
 const asyncHandler = require("../middleware/async");
 
+
+
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "uploads/");
@@ -76,3 +79,5 @@ exports.updateFiles = asyncHandler(async (req, res, next) => {
 exports.getFiles = asyncHandler(async (req, res, next) => {
   res.status(200).json(res.advanceResults);
 });
+
+
