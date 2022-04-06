@@ -11,7 +11,7 @@ const storageRef = admin.storage().bucket(`gs://final-year-project-345318.appspo
 
 
 
-async function uploadFile(path, filename) {
+exports.updateCloudFiles = async (path, filename) =>{
 
 
     let uuid = uuidv4();
@@ -34,11 +34,11 @@ async function uploadFile(path, filename) {
 }
 
 
-(async() => {
-    const url = await uploadFile('../uploads/b-1.png', "b-1.png").then((val)=>{
-        console.log(val);
+// (async() => {
+//     const url = await uploadFile('../uploads/b-1.png', "b-1.png").then((val)=>{
+//         console.log(val);
 
-    });
+//     });
     
-})();
+// })();
 

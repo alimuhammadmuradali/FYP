@@ -3,7 +3,7 @@ const helpers = require("../helper");
 const FileModel = require("../model/fileModel");
 const ErrorResponse = require("../utils/errorResponse");
 const asyncHandler = require("../middleware/async");
-
+const {updateCloudFiles } = require("./fileUploadToCloud");
 
 
 
@@ -25,25 +25,34 @@ let upload = multer({
 
 exports.uploadFiles = asyncHandler((req, res, next) => {
   console.log(req.body);
-  // console.log("ali");
-  // return next(new ErrorResponse(`Your status is Inactive`, 404));
 
   upload(req, res, async (err) => {
     if (req.fileValidationError) {
       return next(new ErrorResponse(req.fileValidationError, 400));
-      //return res.status(400).send({ message: req.fileValidationError });
     } else if (err) {
-      return next(new ErrorResponse(err, 400));
-      //  return res.status(400).send(err);
+      return next(new ErrorResponse(err, 400)); 
     }
 
     if (req.files && req.files.length != 3) {
       return next(new ErrorResponse("send 2 images and a text file", 400));
     }
-    var host = `${req.protocol}://${req.get("host")}/file/`;
-    req.body.txtFile = host + req.files[0].originalname;
-    req.body.labelFile = host + req.files[2].originalname;
-    req.body.imgFile = host + req.files[1].originalname;
+    // var host = `${req.protocol}://${req.get("host")}/file/`;
+    // req.body.txtFile = host + req.files[0].originalname;
+    // req.body.labelFile = host + req.files[2].originalname;
+    // req.body.imgFile = host + req.files[1].originalname;
+    req.body.txtFile = await updateCloudFiles(
+    req.files[0].path,
+    req.files[0].originalname
+  );
+  req.body.labelFile = await updateCloudFiles(
+    req.files[2].path,
+    req.files[2].originalname
+  );
+  req.body.imgFile = await updateCloudFiles(
+    req.files[1].path,
+    req.files[1].originalname
+  );
+
     var File;
     try {
       File = await FileModel.create(req.body);
@@ -59,9 +68,7 @@ exports.uploadFiles = asyncHandler((req, res, next) => {
 });
 
 exports.updateFiles = asyncHandler(async (req, res, next) => {
-  // console.log("ali");
   console.log(req.body);
-  // return next(new ErrorResponse(`Your status is Inactive`, 404));
 
   if (!req.body.objects)
     return next(new ErrorResponse("objects not found", 400));
