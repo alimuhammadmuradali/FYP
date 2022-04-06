@@ -1,6 +1,7 @@
 const firebaseAdmin = require('firebase-admin');
 const { v4: uuidv4 } = require('uuid');
 const serviceAccount = require('../ambassadors.json');
+const firebase = require('firebase/storage'); // eslint-disable-line global-require
 
 const admin = firebaseAdmin.initializeApp({
     credential: firebaseAdmin.credential.cert(serviceAccount),
@@ -9,23 +10,35 @@ const admin = firebaseAdmin.initializeApp({
 const storageRef = admin.storage().bucket(`gs://final-year-project-345318.appspot.com`);
 
 
+
 async function uploadFile(path, filename) {
 
-    // Upload the File
-    const storage = await storageRef.upload(path, {
+
+    let uuid = uuidv4();
+    let baseUrl;
+    var storage = await storageRef.upload(path, {
         public: true,
         destination: `data/${filename}`,
         metadata: {
-            firebaseStorageDownloadTokens: uuidv4(),
+            firebaseStorageDownloadTokens: uuid,
         }
+    }).then((data)=> {
+        let file = data[0];
+         baseUrl = "https://firebasestorage.googleapis.com/v0/b/" + file.metadata.bucket+ "/o/" + encodeURIComponent(file.name) + "?alt=media&token=" + uuid;
+       
     });
 
-    return storage[0].metadata.mediaLink;
+    return baseUrl;
+
+
 }
 
 
 (async() => {
-    const url = await uploadFile('../uploads/a-2.png', "a-2.png");
-    console.log(url);
+    const url = await uploadFile('../uploads/b-1.png', "b-1.png").then((val)=>{
+        console.log(val);
+
+    });
+    
 })();
 
