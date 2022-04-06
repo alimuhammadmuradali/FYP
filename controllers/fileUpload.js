@@ -36,10 +36,7 @@ exports.uploadFiles = asyncHandler((req, res, next) => {
     if (req.files && req.files.length != 3) {
       return next(new ErrorResponse("send 2 images and a text file", 400));
     }
-    // var host = `${req.protocol}://${req.get("host")}/file/`;
-    // req.body.txtFile = host + req.files[0].originalname;
-    // req.body.labelFile = host + req.files[2].originalname;
-    // req.body.imgFile = host + req.files[1].originalname;
+
     req.body.txtFile = await updateCloudFiles(
     req.files[0].path,
     req.files[0].originalname
@@ -60,7 +57,6 @@ exports.uploadFiles = asyncHandler((req, res, next) => {
       return next(new ErrorResponse(error.message, 400));
     }
 
-    console.log(req.body);
     return res
       .status(200)
       .send({ message: "File uploaded successfully.", File });
@@ -81,6 +77,21 @@ exports.updateFiles = asyncHandler(async (req, res, next) => {
   });
 
   return res.status(200).send({ message: "Status Updated successfully." });
+});
+
+exports.deleteFiles = asyncHandler(async (req, res, next) => {
+  console.log(req.body);
+
+  var Files = await FileModel.find({modelName:req.params.modelName , status:req.params.status});
+  console.log(req.params.modelName);
+  console.log(req.params.status);
+  console.log(Files.length);
+  Files.forEach(async (element) => {
+    console.log(element.id);
+    // await FileModel.findByIdAndDelete(element.id);
+   });
+
+   return res.status(200).send({ message: "successfully deleted." });
 });
 
 exports.getFiles = asyncHandler(async (req, res, next) => {
