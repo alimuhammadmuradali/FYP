@@ -12,8 +12,6 @@ const storageRef = admin.storage().bucket(`gs://final-year-project-345318.appspo
 
 
 exports.updateCloudFiles = async (path, filename) =>{
-
-
     let uuid = uuidv4();
     let baseUrl;
     var storage = await storageRef.upload(path, {
@@ -29,16 +27,9 @@ exports.updateCloudFiles = async (path, filename) =>{
     });
 
     return baseUrl;
-
-
 }
 
-
-// (async() => {
-//     const url = await uploadFile('../uploads/b-1.png', "b-1.png").then((val)=>{
-//         console.log(val);
-
-//     });
-    
-// })();
+exports.deleteCloudFiles = async (filename)=>{
+    await storageRef.file(filename).delete();
+}
 

@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
     cb(null, "uploads/");
   },
 
-  // By default, multer removes file extensions so let's add them back
+
   filename: function (req, file, cb) {
     cb(null, file.originalname);
   },
@@ -83,12 +83,18 @@ exports.deleteFiles = asyncHandler(async (req, res, next) => {
   console.log(req.body);
 
   var Files = await FileModel.find({modelName:req.params.modelName , status:req.params.status});
-  console.log(req.params.modelName);
-  console.log(req.params.status);
-  console.log(Files.length);
+
   Files.forEach(async (element) => {
     console.log(element.id);
+
+    //@hassan
+    //await deleteCloudFiles(element.txtFile);
+    //await deleteCloudFiles(element.imgFile);
+    //await deleteCloudFiles(element.labelFile);
+
+
     // await FileModel.findByIdAndDelete(element.id);
+    
    });
 
    return res.status(200).send({ message: "successfully deleted." });
