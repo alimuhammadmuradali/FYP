@@ -86,14 +86,12 @@ exports.deleteFiles = asyncHandler(async (req, res, next) => {
 
   Files.forEach(async (element) => {
     console.log(element.id);
-
-    //@hassan
-    //await deleteCloudFiles(element.txtFile);
-    //await deleteCloudFiles(element.imgFile);
-    //await deleteCloudFiles(element.labelFile);
+    await deleteCloudFiles(element.txtFile);
+    await deleteCloudFiles(element.imgFile);
+    await deleteCloudFiles(element.labelFile);
 
 
-    // await FileModel.findByIdAndDelete(element.id);
+     await FileModel.findByIdAndDelete(element.id);
     
    });
 
