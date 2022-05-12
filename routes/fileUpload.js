@@ -3,7 +3,8 @@ const {
   uploadFiles,
   getFiles,
   updateFiles,
-  deleteFiles
+  deleteFiles,
+  deleteAllFiles,
 } = require("../controllers/fileUpload");
 const advanceResults = require("../middleware/advanceResults");
 const File = require("../model/fileModel");
@@ -16,9 +17,6 @@ router
   .get(advanceResults(File), getFiles)
   .put(updateFiles);
 
-  router
-  .route("/:modelName/:status")
-  .delete(deleteFiles)
-
+router.route("/:modelName/:status").delete(deleteFiles);
 
 module.exports = router;
