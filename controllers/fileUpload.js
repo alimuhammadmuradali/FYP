@@ -3,7 +3,7 @@ const helpers = require("../helper");
 const FileModel = require("../model/fileModel");
 const ErrorResponse = require("../utils/errorResponse");
 const asyncHandler = require("../middleware/async");
-const { updateCloudFiles } = require("./fileUploadToCloud");
+const { updateCloudFiles, deleteCloudFiles } = require("./fileUploadToCloud");
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -86,14 +86,35 @@ exports.deleteFiles = asyncHandler(async (req, res, next) => {
 
   Files.forEach(async (element) => {
     console.log(element.id);
-    await deleteCloudFiles(element.txtFile);
-    await deleteCloudFiles(element.imgFile);
-    await deleteCloudFiles(element.labelFile);
+    // await deleteCloudFiles(element.txtFile);
+    // await deleteCloudFiles(element.imgFile);
+    // await deleteCloudFiles(element.labelFile);
 
-    await FileModel.findByIdAndDelete(element.id);
+    // await FileModel.findByIdAndDelete(element.id);
   });
 
   return res.status(200).send({ message: "successfully deleted." });
+});
+
+exports.deleteIdsFiles = asyncHandler(async (req, res, next) => {
+  idStr = req.params.ids;
+  console.log(idStr);
+  id = idStr.split(",");
+
+  var Files = await FileModel.find({
+    _id: { $in: id },
+  });
+
+  Files.forEach(async (element) => {
+    console.log(element.id);
+    // await deleteCloudFiles(element.txtFile);
+    // await deleteCloudFiles(element.imgFile);
+    // await deleteCloudFiles(element.labelFile);
+
+    // await FileModel.findByIdAndDelete(element.id);
+  });
+
+  return res.status(200).send({ message: req.params.ids });
 });
 
 exports.getFiles = asyncHandler(async (req, res, next) => {
