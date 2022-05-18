@@ -101,18 +101,18 @@ exports.deleteIdsFiles = asyncHandler(async (req, res, next) => {
   console.log(idStr);
   id = idStr.split(",");
 
-  var Files = await FileModel.find({
-    _id: { $in: id },
-  });
+  //   var Files = await FileModel.find({
+  //     _id: { $in: id },
+  //   });
 
-  Files.forEach(async (element) => {
-    console.log(element.id);
-    await deleteCloudFiles(element.txtFile);
-    await deleteCloudFiles(element.imgFile);
-    await deleteCloudFiles(element.labelFile);
+  //   Files.forEach(async (element) => {
+  //     console.log(element.id);
+  //     await deleteCloudFiles(element.txtFile);
+  //     await deleteCloudFiles(element.imgFile);
+  //     await deleteCloudFiles(element.labelFile);
 
-    await FileModel.findByIdAndDelete(element.id);
-  });
+  //     await FileModel.findByIdAndDelete(element.id);
+  //   });
 
   return res.status(200).send({ message: req.params.ids });
 });
