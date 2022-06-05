@@ -36,6 +36,24 @@ exports.updateCloudFiles = async (path, filename) => {
   return baseUrl;
 };
 
-exports.deleteCloudFiles = async (filename) => {
+getPathStorageFromUrl = (url) => {
+  const baseUrl =
+    "https://firebasestorage.googleapis.com/v0/b/final-year-project-345318.appspot.com/o/";
+
+  imagePath = url.replace(baseUrl, "");
+
+  const indexOfEndPath = imagePath.indexOf("?");
+
+  imagePath = imagePath.substring(0, indexOfEndPath);
+
+  imagePath = imagePath.replace("%2F", "/");
+
+  return imagePath;
+};
+
+exports.deleteCloudFiles = async (filepath) => {
+  console.log(filepath);
+  filename = getPathStorageFromUrl(filepath);
+  console.log(filename);
   await storageRef.file(filename).delete();
 };

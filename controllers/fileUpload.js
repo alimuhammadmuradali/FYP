@@ -110,7 +110,6 @@ exports.deleteIdsFiles = asyncHandler(async (req, res, next) => {
     await deleteCloudFiles(element.txtFile);
     await deleteCloudFiles(element.imgFile);
     await deleteCloudFiles(element.labelFile);
-
     await FileModel.findByIdAndDelete(element.id);
   });
 
